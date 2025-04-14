@@ -57,11 +57,18 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- 🔬 Tests -->
+		<!-- 🔁 MapStruct -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.5.5.Final</version>
+		</dependency>
+
+		<!-- 📦 Swagger / OpenAPI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.5</version>
 		</dependency>
 
 		<!-- 🧪 Devtools (reload à chaud) -->
@@ -71,6 +78,7 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
 	</dependencies>
 
 	<build>

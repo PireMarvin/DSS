@@ -4,23 +4,18 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "decision")
+@Table(name = "defdecision")
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DecisionModel {
+public class DefDecisionModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "image", nullable = false)
-    private String image;
-
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "user_id", nullable = false)
-    private int userId;
 }
