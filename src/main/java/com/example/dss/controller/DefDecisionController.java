@@ -1,20 +1,28 @@
 package com.example.dss.controller;
 
+import com.example.dss.dto.generic.DefDecisionDTO;
+import com.example.dss.service.DecisionService;
 import com.example.dss.service.DefDecisionService;
 import org.springframework.http.ResponseEntity;
-import com.example.dss.dto.generic.DefDecisionDTO;
+import com.example.dss.dto.generic.DecisionDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 @RestController
 @Tag(name = "Decisions management")
 @RequestMapping("/v1")
 public class DefDecisionController {
-    DefDecisionService defdecisionService;
+    DefDecisionService defDecisionService;
 
     private DefDecisionController(DefDecisionService defDecisionService) {
-        this.defdecisionService = defDecisionService;
+        this.defDecisionService = defDecisionService;
     }
 
     @Operation(summary = "Get decision by id")
