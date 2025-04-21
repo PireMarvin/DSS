@@ -1,8 +1,8 @@
-package com.example.dss.controller;
+package com.example.dss.controller.temp;
 
-import com.example.dss.service.DecisionService;
+import com.example.dss.service.temp.DecisionService;
 import org.springframework.http.ResponseEntity;
-import com.example.dss.dto.generic.DecisionDTO;
+import com.example.dss.dto.generic.temp.DecisionDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,10 +31,10 @@ public class DecisionController {
         return ResponseEntity.ok(decisionService.getDecisionById(decisionId));
     }
 
-    @Operation(summary = "Get all the decision ids for a specific user")
-    @ApiResponse(responseCode = "200", description = "Decision retrieved successfully")
-    @GetMapping("/decision/{userId}")
-    public ResponseEntity<List<DecisionDTO>> getAllDecisionByUserId(@PathVariable Long userId){
-        return ResponseEntity.ok(decisionService.getDecisionByUserId(userId));
-    }
+//    @Operation(summary = "Get all the decision ids for a specific user")
+//    @ApiResponse(responseCode = "200", description = "Decision retrieved successfully")
+//    @GetMapping("/decision/{userId}")
+//    public ResponseEntity<List<DecisionDTO>> getAllDecisionByUserId(@PathVariable Long userId){
+//        return ResponseEntity.ok(decisionService.getDecisionByUserId(userId));
+//    }
 }

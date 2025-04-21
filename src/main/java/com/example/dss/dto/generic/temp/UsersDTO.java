@@ -1,4 +1,4 @@
-package com.example.dss.dto.generic;
+package com.example.dss.dto.generic.temp;
 
 import lombok.*;
 

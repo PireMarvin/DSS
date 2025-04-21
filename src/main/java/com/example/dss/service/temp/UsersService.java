@@ -1,9 +1,9 @@
-package com.example.dss.service;
+package com.example.dss.service.temp;
 
-import com.example.dss.dto.generic.UsersDTO;
-import com.example.dss.mappers.UsersMapper;
-import com.example.dss.model.UsersModel;
-import com.example.dss.repository.UsersRepository;
+import com.example.dss.dto.generic.temp.UsersDTO;
+import com.example.dss.mappers.temp.UsersMapper;
+import com.example.dss.model.temp.UsersModel;
+import com.example.dss.repository.temp.UsersRepository;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,9 +1,9 @@
-package com.example.dss.service;
+package com.example.dss.service.def;
 
-import com.example.dss.dto.generic.DefDecisionDTO;
-import com.example.dss.mappers.DefDecisionMapper;
-import com.example.dss.model.DefDecisionModel;
-import com.example.dss.repository.DefDecisionRepository;
+import com.example.dss.dto.generic.def.DefDecisionDTO;
+import com.example.dss.mappers.def.DefDecisionMapper;
+import com.example.dss.model.def.DefDecisionModel;
+import com.example.dss.repository.def.DefDecisionRepository;
 import org.springframework.stereotype.Service;
 
 @Service

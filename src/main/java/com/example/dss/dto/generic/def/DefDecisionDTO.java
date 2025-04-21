@@ -1,4 +1,4 @@
-package com.example.dss.dto.generic;
+package com.example.dss.dto.generic.def;
 
 import lombok.*;
 
@@ -7,8 +7,9 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DecisionDTO {
+public class DefDecisionDTO {
     private int id;
+    private String image;
     private String description;
-    private int userId;
+
 }

@@ -1,0 +1,20 @@
+logging:
+  level:
+    root: DEBUG
+    sun.rmi: ERROR
+    javax.management.remote.rmi: ERROR
+
+spring:
+  config:
+    import: "application-password.yaml"
+
+  datasource:
+    decision :
+      jdbc-url : jdbc:mysql://datamining.masmzi.icu:3306/decision
+      username : datamining
+      driver-class-name : com.mysql.cj.jdbc.Driver
+
+    decisiontemp :
+      jdbc-url: jdbc:mysql://datamining.masmzi.icu:3306/decision_temp
+      username: datamining
+      driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,9 +1,9 @@
-package com.example.dss.mappers;
+package com.example.dss.mappers.def;
 
-import com.example.dss.dto.generic.DefDecisionDTO;
-import com.example.dss.dto.post.DecisionCreateDTO;
-import com.example.dss.dto.post.DefDecisionCreateDTO;
-import com.example.dss.model.DefDecisionModel;
+import com.example.dss.dto.generic.def.DefDecisionDTO;
+import com.example.dss.dto.post.temp.DecisionCreateDTO;
+import com.example.dss.dto.post.def.DefDecisionCreateDTO;
+import com.example.dss.model.def.DefDecisionModel;
 import org.mapstruct.Mapper;
 
 import java.util.List;

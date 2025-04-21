@@ -1,10 +1,10 @@
-package com.example.dss.model;
+package com.example.dss.model.temp;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "decision")
+@Table(name = "temporary_decision")
 @Getter
 @Setter
 @Builder

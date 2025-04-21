@@ -1,4 +1,4 @@
-package com.example.dss.dto.post;
+package com.example.dss.dto.post.def;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

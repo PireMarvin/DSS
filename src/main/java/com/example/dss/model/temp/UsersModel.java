@@ -1,4 +1,4 @@
-package com.example.dss.model;
+package com.example.dss.model.temp;
 
 import jakarta.persistence.*;
 import lombok.*;

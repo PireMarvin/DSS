@@ -1,6 +1,6 @@
-package com.example.dss.repository;
+package com.example.dss.repository.def;
 
-import com.example.dss.model.DefDecisionModel;
+import com.example.dss.model.def.DefDecisionModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
