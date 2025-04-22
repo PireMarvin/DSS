@@ -14,8 +14,6 @@ public class DefDecisionCreateDTO {
 
     @NotNull(message = "Description cannot be empty")
     @NotBlank(message = "Description cannot be empty")
-    @Size(max = 255, message = "Description is too long")
+    @Size(max = 1000, message = "Description must be at most 1000 characters")
     private String description;
-
-    //private int userId;
 }

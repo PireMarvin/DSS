@@ -1,6 +1,7 @@
 package com.example.dss.service.temp;
 
 import com.example.dss.dto.generic.temp.UsersDTO;
+import com.example.dss.dto.post.temp.UsersCreateDTO;
 import com.example.dss.mappers.temp.UsersMapper;
 import com.example.dss.model.temp.UsersModel;
 import com.example.dss.repository.temp.UsersRepository;
@@ -19,5 +20,14 @@ public class UsersService {
     public UsersDTO getUserById(Long userId) {
         UsersModel usersModel = usersRepository.findById(userId).get();
         return usersMapper.toDTO(usersModel);
+    }
+
+    public UsersDTO createUser(UsersCreateDTO userCreateDTO) {
+        UsersModel usersModel = UsersModel.builder()
+                .name(userCreateDTO.getName())
+                .password(userCreateDTO.getPassword())
+                .role(userCreateDTO.getRole())
+                .build();
+        return usersMapper.toDTO(usersRepository.save(usersModel));
     }
 }

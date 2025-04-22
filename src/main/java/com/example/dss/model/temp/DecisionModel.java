@@ -15,12 +15,17 @@ public class DecisionModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Lob
     @Column(name = "image", nullable = false)
-    private String image;
+    private byte[] image;
 
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "user_id", nullable = false)
-    private int userId;
+//    @Column(name = "user_id", nullable = false)
+//    private int userId;
+
+    @ManyToOne
+    @JoinColumn(name = "users_id")
+    private UsersModel users;
 }

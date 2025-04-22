@@ -1,6 +1,7 @@
 package com.example.dss.dto.post.temp;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import jakarta.validation.constraints.NotNull;
@@ -13,14 +14,16 @@ import jakarta.validation.constraints.NotNull;
 public class DecisionCreateDTO {
     @NotNull(message = "Image name cannot be empty")
     @NotBlank(message = "Image name cannot be empty")
-    @Size(max = 255, message = "Image name is too long")
-    private String image;
+    private byte[] image;
 
     @NotNull(message = "Description cannot be empty")
     @NotBlank(message = "Description cannot be empty")
-    @Size(max = 255, message = "Description is too long")
+    @Size(max = 1000, message = "Description must be at most 1000 characters")
     private String description;
 
-    //private int userId;
+    @NotNull(message = "userId cannot be empty")
+    @Positive(message = "userId must be a positive number")
+    private int userId;
+
 }
 

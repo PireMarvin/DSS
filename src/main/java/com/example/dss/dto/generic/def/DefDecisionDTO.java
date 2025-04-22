@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 public class DefDecisionDTO {
     private int id;
-    private String image;
     private String description;
 
 }
