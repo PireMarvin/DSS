@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface DefDecisionMapper {
     DefDecisionDTO toDTO(DefDecisionModel defDecisionModel);
-    
+
     @Mapping(target = "id", ignore = true)
     DefDecisionModel toModel(DecisionCreateDTO decisionCreateDTO);
 
