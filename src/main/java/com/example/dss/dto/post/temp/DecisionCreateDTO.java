@@ -12,8 +12,6 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DecisionCreateDTO {
-    @NotNull(message = "Image name cannot be empty")
-    @NotBlank(message = "Image name cannot be empty")
     private byte[] image;
 
     @NotNull(message = "Description cannot be empty")
@@ -23,7 +21,7 @@ public class DecisionCreateDTO {
 
     @NotNull(message = "userId cannot be empty")
     @Positive(message = "userId must be a positive number")
-    private int userId;
+    private Long userId;
 
 }
 

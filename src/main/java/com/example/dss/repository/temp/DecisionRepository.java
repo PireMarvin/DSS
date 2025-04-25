@@ -12,7 +12,7 @@ public interface DecisionRepository extends JpaRepository<DecisionModel, Long> {
 
     List<DecisionModel> findAllDecisionById(int id);
 
-    @Query("SELECT d.id FROM DecisionModel d WHERE d.users.id = :userId")
-    //@Query("SELECT d.id FROM DecisionModel d WHERE d.users = :userId")
+    //@Query("SELECT d.id FROM DecisionModel d WHERE d.users.id = :userId")
+    @Query("SELECT d.id FROM DecisionModel d WHERE d.userId = :userId")
     List<Long> findDecisionIdsByUserId(@Param("userId") Long userId);
 }

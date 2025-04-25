@@ -16,16 +16,16 @@ public class DecisionModel {
     private int id;
 
     @Lob
-    @Column(name = "image", nullable = false)
+    @Column(name = "image", nullable = false, columnDefinition = "LONGBLOB")
     private byte[] image;
 
     @Column(name = "description", nullable = false)
     private String description;
 
-//    @Column(name = "user_id", nullable = false)
-//    private int userId;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
-    @ManyToOne
-    @JoinColumn(name = "users_id")
-    private UsersModel users;
+//    @ManyToOne
+//    @JoinColumn(name = "users_id")
+//    private UsersModel users;
 }

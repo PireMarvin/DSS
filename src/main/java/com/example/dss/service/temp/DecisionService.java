@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DecisionService {
@@ -31,21 +32,22 @@ public class DecisionService {
 
     public List<DecisionDTO> getDecisionByUserId(Long userId) {
         List<Long> decisionIds = decisionRepository.findDecisionIdsByUserId(userId);
-        List<DecisionModel> decisionModelList = new ArrayList<>();
 
-        for (Long decisionId : decisionIds) {
-            decisionRepository.findById(decisionId)
-                    .map(decisionModel -> decisionModelList.add(decisionModel))
-                    .orElse(null);  // ou une valeur par défaut
-        }
+        List<DecisionModel> decisionModels = decisionIds.stream()
+                .map(decisionRepository::findById)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .toList();
 
-        return decisionMapper.toDTOList(decisionModelList);
+        return decisionMapper.toDTOList(decisionModels);
     }
+
 
     public DecisionDTO createDecision(DecisionCreateDTO decisionCreateDTO) {
         DecisionModel decisionModel = DecisionModel.builder()
                 .image(decisionCreateDTO.getImage())
                 .description(decisionCreateDTO.getDescription())
+                .userId(decisionCreateDTO.getUserId())
                 .build();
 
         decisionModel = decisionRepository.save(decisionModel);  // Sauvegarde en base
