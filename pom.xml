@@ -71,7 +71,6 @@
 
 	<build>
 		<plugins>
-			<!-- 🎯 Compileur Maven : prend en charge Java  + Lombok + MapStruct -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -94,6 +93,11 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
+
 </project>
