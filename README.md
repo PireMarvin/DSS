@@ -22,7 +22,7 @@ L'application suit une **architecture en 3 couches (Three-Tier Architecture)** b
 ```plaintext
 src
  ├── main
- │   ├── java/com.hepl.backendapi
+ │   ├── java/com.example.dss
  │   │   ├── controller     # Gère les requêtes HTTP
  │   │   ├── dto            # Transfert de données (Data Transfer Objects)
  │   │   ├── model          # Modèles de données (JPA Entities)
